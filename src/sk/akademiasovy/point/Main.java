@@ -23,8 +23,22 @@ public class Main {
 
         System.out.println(p31.getDistance());
         Point3D p33=(Point3D)p3;
-        Point3D p34=new Point();
+       // Point3D p34=new Point();
+        ((Point3D) p3).test();  //pretypovanie
 
+        Geometry g1;
+        g1= new Point(5,-9);
+        ((Point3D)g1).print();                 //samotne g1 moze volat len tie metody co ma v sebe
 
+        Geometry[] arr=new Geometry[10];
+        int i;
+        for(i=0;i<10;i++){
+            Point3D p=new Point3D();
+            p.generateRandomCoord();
+            arr[i]=p;
+        }
+        for(Geometry g:arr){
+            ((Point3D)g).print();
+        }
     }
 }

@@ -39,6 +39,9 @@ public class Point3D extends Point {
     public void print(){
         System.out.println("Point3D: ("+getX()+","+getY()+","+z+") Dist: "+getDistance());
     }
+    public void test();
+
+
 
 }
 
