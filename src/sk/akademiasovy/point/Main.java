@@ -21,9 +21,9 @@ public class Main {
         Object o1=new Point();
         Point p3=new Point3D(2,8,7);
 
-        System.out.println(p31.getDistance());
+        System.out.println(p3.getDistance());
         Point3D p33=(Point3D)p3;
-       // Point3D p34=new Point();
+                  // Point3D p34=new Point();
         ((Point3D) p3).test();  //pretypovanie
 
         Geometry g1;
@@ -40,5 +40,15 @@ public class Main {
         for(Geometry g:arr){
             ((Point3D)g).print();
         }
+
+        Point bod15=new Point(2,5);
+
+
+        Line line1=new Line(bod15,new Point(10,4));
+        Line line2=new Line(1,3,4,6);
+
+        System.out.println("Length of line1 is"+line1.getLength());
+        System.out.println("Middle point of line2 is : ");
+        line2.getMiddlePointOfLine().print();
     }
 }

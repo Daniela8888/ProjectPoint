@@ -47,21 +47,21 @@ public class Point implements Geometry{
     }
 
     public double getDistance(){
-        return Math.sqrt((x*x)+(y*y));
+        return Math.sqrt(x*x+y*y);
     }
     public void print(){
-        System.out.println("Point: ("+x+","+y+")Q; "+getQuadrant()+ "Dist: "+getDistance());
+        System.out.println("Point: ["+x+","+y+"]Q; "+getQuadrant()+ "Dist: "+getDistance());
     }
     public double getDistanceFromOtherPoint(Point other){
         return Math.sqrt(Math.pow(x-other.getX(),2)+Math.pow(y-other.getY(),2));
     }
-    public void doAxialSymetric(char type){
+    public void doAxialSymmetry(char type){
         if(type == 'x' || type =='X')
             y=-y;
         else if (type=='y' || type=='Y')
             x=-x;
     }
-    public void soCentralSymetry(){
+    public void doCentralSymetry(){
         x=-x;
         y=-y;
     }
