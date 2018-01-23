@@ -1,5 +1,7 @@
 package sk.akademiasovy.point;
 
+import sk.akademiasovy.date.MyDate;
+
 public class Main {
     public static void main(String[] args) {
         Point p1=new Point(8,12);
@@ -50,5 +52,15 @@ public class Main {
         System.out.println("Length of line1 is"+line1.getLength());
         System.out.println("Middle point of line2 is : ");
         line2.getMiddlePointOfLine().print();
+
+        Triangle t1=new Triangle(new Point(3,3), new Point(4,7), new Point(5,3));
+        if(t1.isIsosceles()){
+            System.out.println("Triangle t1 is isosceles!");
+        }
+
+        MyDate myDate=new MyDate();
+        myDate.today();
+        myDate.today2();
+
     }
 }
