@@ -17,9 +17,7 @@ public class Line {
         return a.getDistanceFromOtherPoint(b);    //prevzate
     }
 
-    public Point getMiddlePointOfLine(){
-        return new Point((a.getX()+b.getX())/2,(a.getY()+b.getY())/2);
-    }
+    public Point getMiddlePointOfLine(){ return new Point (a.getX()+b.getX())/2,(a.getY()+b.getY())/2); }
 
     public boolean isParallelToTheAxisX(){
     return a.getY()==b.getY();
