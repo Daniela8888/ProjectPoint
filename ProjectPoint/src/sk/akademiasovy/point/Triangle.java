@@ -1,6 +1,8 @@
 package sk.akademiasovy.point;
 
-public class Triangle implements InterfaceTriangle{
+
+
+public class Triangle implements InterfaceTriangle {
     private Point a;
     private Point b;
     private Point c;
@@ -10,10 +12,8 @@ public class Triangle implements InterfaceTriangle{
         this.b = b;
         this.c = c;
     }
-
     public double getSideA(){
         return b.getDistanceFromOtherPoint(c);
-
     }
 
     public double getSideB(){
@@ -23,12 +23,13 @@ public class Triangle implements InterfaceTriangle{
     public double getSideC(){
         return b.getDistanceFromOtherPoint(a);
     }
+
     public double getPerimeter(){
         return getSideA()+getSideB()+getSideC();
     }
+
     public double getArea(){
-        double s;
-        s=getPerimeter()/2;
+        double s=getPerimeter()/2;
         return Math.sqrt(s*(s-getSideA())*(s-getSideB())*(s-getSideC()));
     }
 
@@ -46,7 +47,7 @@ public class Triangle implements InterfaceTriangle{
 
     @Override
     public boolean isEquilateral() {
-        if(getSideA()+getSideB()==getSideC()/2)
+        if((getSideA() == getSideB() && getSideB() == getSideC() && getSideA() == getSideC()))
             return true;
         else
             return false;
@@ -54,13 +55,18 @@ public class Triangle implements InterfaceTriangle{
 
     @Override
     public boolean isIsosceles() {
-        if(getSideA()==getSideB())
-            return true;
-        else if(getSideA()==getSideC())
+        if(getSideA()==getSideB() )
             return true;
         else if(getSideB()==getSideC())
+            return true;
+        else if(getSideC()==getSideA())
             return true;
         else
             return false;
     }
+
+
+
+
+
 }
