@@ -1,6 +1,8 @@
 package sk.akademiasovy.point;
 
 import sk.akademiasovy.abstrakt.Person;
+import sk.akademiasovy.abstrakt.Student;
+import sk.akademiasovy.abstrakt.Teacher;
 import sk.akademiasovy.date.MyDate;
 import sk.akademiasovy.sk.akademiasovy.other.MyClass;
 
@@ -78,11 +80,20 @@ public class Main {
 
         System.out.println("Equilatera is :"+triangle3.isEquilateral());
 
-   
-
         MyClass myClass=new MyClass();
 
         System.out.println(myClass.getGender("95215789874"));
+
+        Person p=new Teacher();
+        ((Teacher) p).setSalary(2200);
+
+        Person s=new Student();
+        if(s instanceof Teacher)
+        ((Teacher) s).setSalary(2200);
+
+        Object rrr=new Student();
+        ((Person)rrr).setAge(30);
+        ///rrr.
 
 
     }
